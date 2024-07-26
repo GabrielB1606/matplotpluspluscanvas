@@ -91,11 +91,11 @@ int main() {
 
     matplot::xlabel("N");
     matplot::ylabel("nanoseconds");
-    auto p_bf = matplot::plot(x_axis, y_bf, "-o");
+    auto p_bf = matplot::semilogy(x_axis, y_bf, "-o");
     p_bf->display_name("Brute Force");
     p_bf->line_width(3);
     matplot::hold(true);
-    auto p_k = matplot::plot(x_axis, y_k, "--xr");
+    auto p_k = matplot::semilogy(x_axis, y_k, "--xr");
     p_k->display_name("Kadane 2D");
     p_k->line_width(3);
     matplot::hold(false);
